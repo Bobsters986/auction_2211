@@ -12,6 +12,8 @@ class Item
   end
 
   def current_high_bid
+    bids.sort_by{|k, v| v}
+    bids.values.last
   end
 
 end
