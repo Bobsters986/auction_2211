@@ -148,7 +148,5 @@ RSpec.describe Auction do
         expect(auction.bidder_info).to eq(expected_nested_hash)
       end
     end
-
   end
-
 end
