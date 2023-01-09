@@ -7,10 +7,11 @@ RSpec.describe Auction do
 
   describe '#initialize' do
     it 'exists' do
-      expect(item1).to be_an(Auction)
+      expect(auction).to be_an(Auction)
     end
 
     it 'has attributes' do
+      expect(auction.items).to eq([])
     end
   end
 end
