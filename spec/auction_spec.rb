@@ -125,8 +125,27 @@ RSpec.describe Auction do
         item3.add_bid(attendee2, 15)
       end
       
-      it 'will return an array of #bidders in the auction' do
+      it 'can return an array of #bidders in the auction' do
         expect(auction.bidders).to eq([attendee2, attendee1, attendee3])
+      end
+
+      it 'can create a hash of hashes with attendees, their budgets, and items bid on' do
+        expected_nested_hash = {
+        attendee1 => {
+                      :budget => 50,
+                      :items => [item1]
+                    },
+        attendee2 => {
+                      :budget => 75,
+                      :items => [item1, item3]
+                    },    
+        attendee3 => {
+                      :budget => 100,
+                      :items => [item4]
+                    }
+                  }
+
+        expect(auction.bidder_info).to eq(expected_nested_hash)
       end
     end
 

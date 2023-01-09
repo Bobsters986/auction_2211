@@ -34,5 +34,18 @@ class Auction
       item.bids.keys
     end.uniq
   end
-  
+
+  def bidder_info
+    bidder_info_hash = Hash.new{|h,v| h[v] = {}}
+    bidders.each do |bidder|
+      bidder_info_hash[bidder]
+    end
+    bidder_info_hash.sort_by{|key, value| key.budget}
+
+    bidder_info_hash.each do |key, value|
+      value[:budget] = key.budget
+      value[:items] = []
+    end
+    bidder_info_hash
+  end
 end
