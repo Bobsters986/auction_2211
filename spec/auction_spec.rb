@@ -111,7 +111,7 @@ RSpec.describe Auction do
     let(:item4) { Item.new('2 Days Dogsitting') }
     let(:item5) { Item.new('Forever Stamps') }
 
-    describe 'can give information on the bidders and whichn items they have bid on' do
+    describe 'can give information on the bidders and which items they have bid on' do
       before do
         auction.add_item(item1)
         auction.add_item(item2)

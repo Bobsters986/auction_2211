@@ -23,9 +23,16 @@ class Auction
 
   def potential_revenue
     potential_revenue = 0
-    items.each do |item|
+    @items.each do |item|
       potential_revenue += item.current_high_bid if !item.bids.empty?
     end
     potential_revenue
   end
+
+  def bidders
+    @items.flat_map do |item|
+      item.bids.keys
+    end.uniq
+  end
+  
 end
