@@ -89,7 +89,7 @@ RSpec.describe Auction do
         expect(auction.unpopular_items).to eq([item2, item5])
       end
 
-      xit 'can calculate #potential_revenue based on the highest bid for each item' do
+      it 'can calculate #potential_revenue based on the highest bid for each item' do
         item1.add_bid(attendee2, 20)
         item1.add_bid(attendee1, 22)
         item4.add_bid(attendee3, 50)
