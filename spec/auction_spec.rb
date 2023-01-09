@@ -7,6 +7,9 @@ RSpec.describe Auction do
   let(:attendee) { Attendee.new(name: "Megan", budget: "$50") }
   let(:item1) { Item.new('Chalkware Piggy Bank') }
   let(:item2) { Item.new('Bamboo Picture Frame') }
+  let(:item3) { Item.new('Homemade Chocolate Chip Cookies') }
+  let(:item4) { Item.new('2 Days Dogsitting') }
+  let(:item5) { Item.new('Forever Stamps') }
 
 
   describe '#initialize' do
